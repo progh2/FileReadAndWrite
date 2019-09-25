@@ -34,7 +34,7 @@
             this.tpRead = new System.Windows.Forms.TabPage();
             this.tpWrite = new System.Windows.Forms.TabPage();
             this.openFileDlg = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDig = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.txtReadFile = new System.Windows.Forms.TextBox();
             this.btnReadFileSelect = new System.Windows.Forms.Button();
             this.btnReadText = new System.Windows.Forms.Button();
@@ -110,9 +110,9 @@
             this.openFileDlg.FileName = "openFileDialog1";
             this.openFileDlg.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
             // 
-            // saveFileDig
+            // saveFileDlg
             // 
-            this.saveFileDig.Filter = "텍스트 파일(*.txt)|*.txt";
+            this.saveFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
             // 
             // txtReadFile
             // 
@@ -130,6 +130,7 @@
             this.btnReadFileSelect.TabIndex = 1;
             this.btnReadFileSelect.Text = "파일 선택";
             this.btnReadFileSelect.UseVisualStyleBackColor = true;
+            this.btnReadFileSelect.Click += new System.EventHandler(this.btnReadFileSelect_Click);
             // 
             // btnReadText
             // 
@@ -139,6 +140,7 @@
             this.btnReadText.TabIndex = 2;
             this.btnReadText.Text = "불러오기";
             this.btnReadText.UseVisualStyleBackColor = true;
+            this.btnReadText.Click += new System.EventHandler(this.btnReadText_Click);
             // 
             // txtReadText
             // 
@@ -166,6 +168,7 @@
             this.btnWriteFileSelect.TabIndex = 1;
             this.btnWriteFileSelect.Text = "파일 선택";
             this.btnWriteFileSelect.UseVisualStyleBackColor = true;
+            this.btnWriteFileSelect.Click += new System.EventHandler(this.btnWriteFileSelect_Click);
             // 
             // btnWriteText
             // 
@@ -175,6 +178,7 @@
             this.btnWriteText.TabIndex = 2;
             this.btnWriteText.Text = "저장하기";
             this.btnWriteText.UseVisualStyleBackColor = true;
+            this.btnWriteText.Click += new System.EventHandler(this.btnWriteText_Click);
             // 
             // txtWriteText
             // 
@@ -216,15 +220,15 @@
         private System.Windows.Forms.TabPage tpRead;
         private System.Windows.Forms.TabPage tpWrite;
         private System.Windows.Forms.OpenFileDialog openFileDlg;
-        private System.Windows.Forms.SaveFileDialog saveFileDig;
+        private System.Windows.Forms.SaveFileDialog saveFileDlg;
         private System.Windows.Forms.TextBox txtReadText;
         private System.Windows.Forms.Button btnReadText;
         private System.Windows.Forms.Button btnReadFileSelect;
         private System.Windows.Forms.TextBox txtReadFile;
         private System.Windows.Forms.TextBox txtWriteText;
         private System.Windows.Forms.Button btnWriteText;
-        private System.Windows.Forms.Button btnWriteFileSelect;
         private System.Windows.Forms.TextBox txtWriteFile;
+        private System.Windows.Forms.Button btnWriteFileSelect;
     }
 }
 
